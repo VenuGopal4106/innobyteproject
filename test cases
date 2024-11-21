@@ -1,0 +1,98 @@
+1. User Registration
+Test Case ID: TC001
+Title: Validate user registration with a unique username.
+Steps:
+
+Register a user with a unique username, e.g., username: testuser1 and password: password123.
+Check the users table in the database to verify the record.
+Expected Result: User is registered successfully, and the record is stored in the database.
+Test Case ID: TC002
+Title: Prevent user registration with a duplicate username.
+Steps:
+
+Attempt to register a user with a username that already exists.
+Expected Result: Registration fails with an error message indicating the username is already taken.
+2. User Authentication
+Test Case ID: TC003
+Title: Validate login with correct credentials.
+Steps:
+
+Register a user (username: testuser2, password: password456).
+Attempt to log in with the same credentials.
+Expected Result: Login succeeds, and the user is authenticated.
+Test Case ID: TC004
+Title: Reject login with incorrect credentials.
+Steps:
+
+Register a user (username: testuser3, password: password789).
+Attempt to log in with the correct username but an incorrect password.
+Expected Result: Login fails with an error message.
+3. Transaction Management
+Test Case ID: TC005
+Title: Add a transaction and verify its storage.
+Steps:
+
+Log in as a user (username: testuser4).
+Add a transaction: type: income, amount: 1000.0, category: Salary.
+Expected Result: Transaction is successfully added and visible in the transactions table.
+Test Case ID: TC006
+Title: Update a transaction.
+Steps:
+
+Add a transaction for a user.
+Update the transaction details, e.g., change the amount or category.
+Expected Result: Updated transaction details are reflected in the database.
+Test Case ID: TC007
+Title: Delete a transaction.
+Steps:
+
+Add a transaction for a user.
+Delete the transaction.
+Expected Result: Transaction is removed from the database.
+4. Budgeting
+Test Case ID: TC008
+Title: Set and retrieve a budget for a category.
+Steps:
+
+Log in as a user.
+Set a budget: category: Food, amount: 500.0, month: 2024-11.
+Expected Result: Budget is successfully set and stored in the budgets table.
+Test Case ID: TC009
+Title: Notify when a budget is exceeded.
+Steps:
+
+Set a budget for a category, e.g., category: Food, amount: 300.0.
+Add expenses exceeding the budget for the same category.
+Expected Result: Notification is displayed to the user indicating the budget has been exceeded.
+5. Reports
+Test Case ID: TC010
+Title: Generate a monthly financial report.
+Steps:
+
+Add multiple transactions for a user within the same month.
+Generate a report for that month.
+Expected Result: The report accurately displays total income, expenses, and savings for the month.
+Test Case ID: TC011
+Title: Generate a yearly financial report.
+Steps:
+
+Add transactions spanning multiple months for a user.
+Generate a report for the entire year.
+Expected Result: The report summarizes all transactions, categorized by income and expenses for the year.
+6. Data Backup and Restore
+Test Case ID: TC012
+Title: Backup database successfully.
+Steps:
+
+Log in as a user and perform various transactions.
+Trigger the backup functionality.
+Check the backup file to ensure data integrity.
+Expected Result: Backup file contains all user and transaction data.
+Test Case ID: TC013
+Title: Restore data from backup.
+Steps:
+
+Delete the database file.
+Restore the database from the backup file.
+Log in and verify that all data is intact.
+Expected Result: Data is restored successfully, and no information is lost.

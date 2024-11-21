@@ -1,0 +1,114 @@
+Personal Finance Management Application - User Manual
+Welcome to the Personal Finance Management Application! This guide will help you install, set up, and use the application to manage your finances effectively.
+
+Table of Contents
+Getting Started
+Installation Instructions
+Features Overview
+Using the Application
+Registration
+Login
+Adding Transactions
+Updating Transactions
+Deleting Transactions
+Setting Budgets
+Generating Reports
+Backup and Restore
+Error Handling and Troubleshooting
+Getting Started
+The Personal Finance Management Application is a command-line tool designed to:
+
+Track income and expenses.
+Categorize transactions (e.g., Food, Rent, Salary).
+Set and monitor budgets.
+Generate financial reports.
+Back up and restore data.
+Installation Instructions
+Prerequisites
+Install Python 3.8+ from python.org.
+Ensure pip is installed for package management.
+Install SQLite (pre-installed with Python).
+Steps
+Download the application code (ensure all Python files and database scripts are in the same folder).
+Open a terminal/command prompt.
+Navigate to the application directory using cd commands.
+Install required dependencies:
+bash
+Copy code
+pip install -r requirements.txt
+Run the application:
+bash
+Copy code
+python main.py
+Features Overview
+User Registration and Login: Secure access with unique usernames and passwords.
+Transaction Management: Add, update, delete, and categorize income and expenses.
+Budgeting: Set monthly budgets and get alerts when limits are exceeded.
+Financial Reports: Generate monthly and yearly summaries.
+Backup and Restore: Safeguard and recover your financial data.
+Using the Application
+Registration
+Select the Register option.
+Enter a unique username and password.
+If successful, you'll see:
+bash
+Copy code
+Registration successful! Please log in.
+Login
+Select the Login option.
+Enter your registered username and password.
+If authenticated, you'll see:
+css
+Copy code
+Welcome, [Your Username]!
+Adding Transactions
+Choose Add Transaction from the menu.
+Enter the following details:
+Type: Income or Expense.
+Amount: e.g., 500.
+Category: e.g., Food, Rent, Salary.
+Date: Format YYYY-MM-DD.
+Confirm to save the transaction.
+Updating Transactions
+Select Update Transaction.
+Choose the transaction to update (by ID or other filters).
+Modify the fields as required.
+Save changes.
+Deleting Transactions
+Select Delete Transaction.
+Enter the ID of the transaction to delete.
+Confirm the deletion.
+Setting Budgets
+Choose Set Budget from the menu.
+Enter the category, monthly budget amount, and the applicable month.
+If the budget is exceeded during the month, you'll see an alert:
+vbnet
+Copy code
+Alert! You've exceeded your budget for [Category].
+Generating Reports
+Select Generate Report from the menu.
+Choose Monthly or Yearly reports.
+Enter the date range (for monthly: YYYY-MM, for yearly: YYYY).
+View a summary showing:
+Total Income
+Total Expenses
+Savings
+Backup and Restore
+Backup
+Select Backup Data.
+Specify the location to save the backup.
+Confirm, and the database file is copied to the specified location.
+Restore
+Select Restore Data.
+Provide the path to the backup file.
+Confirm, and the data will be restored.
+Error Handling and Troubleshooting
+Error	Solution
+"Username already exists"	Use a unique username during registration.
+"Invalid login credentials"	Double-check your username and password. Reset if needed.
+"No transactions found"	Ensure you’ve added transactions before attempting to view or update them.
+"Exceeding budget alert"	Review your spending in the specified category and adjust the budget if necessary.
+Database errors (e.g., "No table")	Ensure the database file is in the correct folder and initialized properly using setup scripts.
+Backup/Restore issues	Verify the backup file path and ensure you have write permissions for the target directory.
+Contact Support
+If you encounter issues not listed above, feel free to contact the developer at boorlav23@gmail.com
